@@ -9,11 +9,7 @@ terraform {
 
 provider "aws" {
   region  = var.region
-
-  tags = {
-  Department = "devops" 
-  Billable = "true"
-  }
+  
 }
 
 resource "aws_vpc" "hashicat" {
@@ -137,6 +133,8 @@ resource "aws_instance" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+      Department = "devops" 
+      Billable = "true"
   }
 }
 
