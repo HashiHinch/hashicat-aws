@@ -18,12 +18,12 @@ resource "aws_vpc" "hashicat" {
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
     environment = "Production"
-  }
-
-    tags = {
-    name = "${var.prefix}-vpc-${var.region}"
     Department = "devops"
   }
+
+
+    
+
 }
 
 resource "aws_subnet" "hashicat" {
