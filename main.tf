@@ -9,6 +9,8 @@ terraform {
 
 provider "aws" {
   region  = var.region
+  Department = "devops" 
+  Billable = "true"
 }
 
 resource "aws_vpc" "hashicat" {
@@ -18,8 +20,6 @@ resource "aws_vpc" "hashicat" {
   tags = {
     name = "${var.prefix}-vpc-${var.region}"
     environment = "Production"
-    devops = "Department"
-    true = "Billable"
   }
 
 
